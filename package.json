@@ -1,0 +1,14 @@
+{
+  "name": "electron-boilerplate",
+  "version": "1.0.0",
+  "description": "Electron Boilerplate Code",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "AbubakarKang",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^18.0.4"
+  }
+}
