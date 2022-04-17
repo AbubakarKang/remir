@@ -1,7 +1,7 @@
 {
-  "name": "electron-boilerplate",
-  "version": "1.0.0",
-  "description": "Electron Boilerplate Code",
+  "name": "remir",
+  "version": "0.0.0",
+  "description": "Remir - A desktop application to remind yourself of things.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron ."
