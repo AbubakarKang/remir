@@ -21,6 +21,10 @@ const createWindow = () => {
 	});
 
 	mainWindow.loadURL(path.join(__dirname, "views/index.html"));
+
+	ipc.on("closeApp", () => mainWindow.close());
+	ipc.on("minimizeApp", () => mainWindow.minimize());
+	ipc.on("maximizeApp", () => mainWindow.maximize());
 };
 
 //------------------------\\ APP FUNCTIONS //------------------------\\
