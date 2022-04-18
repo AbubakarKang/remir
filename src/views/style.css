@@ -97,7 +97,8 @@ body {
 	background: var(--dark-color);
 }
 
-.addition-field {
+.addition-field,
+.todos {
 	width: 350px;
 	display: grid;
 	margin-left: 50%;
@@ -134,4 +135,56 @@ body {
 
 .addition-field i:hover {
 	transform: scale(1.1);
+}
+
+.todos {
+	margin-top: 30px;
+	color: var(--dark-color);
+}
+
+.todo {
+	width: 100%;
+	display: flex;
+	height: 80px;
+	overflow: hidden;
+	margin-top: 10px;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--light-color);
+}
+
+.todo-detail {
+	width: 310px;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.todo-time {
+	width: 100%;
+	text-align: right;
+}
+
+.todo-delete {
+	height: 80px;
+	display: flex;
+	cursor: pointer;
+	padding: 0px 10px;
+	background: red;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -5px 0px 10px -5px rgba(0, 0, 0, 0.3);
+
+}
+
+.todo-delete i {
+	font-size: 20px;
+	pointer-events: none;
+}
+
+.todo-delete:hover ~ .todo-delete i {
+	font-size: 25px;
 }
