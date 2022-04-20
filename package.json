@@ -9,6 +9,7 @@
   "author": "AbubakarKang",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "electron": "^18.0.4"
   }
 }
