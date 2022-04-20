@@ -1,7 +1,9 @@
 //---------------------------\\ IMPORTS //---------------------------\\
 
 const { app, BrowserWindow, ipcMain } = require("electron");
+const mongoose = require("mongoose");
 const path = require("path");
+require("dotenv").config();
 const ipc = ipcMain;
 
 //--------------------------\\ FUNCTIONS //--------------------------\\
@@ -31,6 +33,12 @@ const createWindow = () => {
 			mainWindow.maximize();
 		}
 	});
+
+	mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+	const db = mongoose.connection;
+
+	db.on("error", () => console.error("Error connecting to database"));
+	db.once("open", () => console.log("Connected to database"));
 };
 
 //------------------------\\ APP FUNCTIONS //------------------------\\
